@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Harris Bakery - Свяжитесь с нами">
+  <title>Harris Bakery - Контакты</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins|Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Cart Modal -->
+  <div class="cart-modal">
+    <div class="cart-header">
+      <h3>Ваша корзина</h3>
+      <button class="close-cart">&times;</button>
+    </div>
+    <div class="cart-items">
+      <!-- Cart items will be added here by JavaScript -->
+    </div>
+    <div class="cart-total">
+      <p>Итого: <span class="total-price">$0</span></p>
+      <button class="checkout-btn">Оформить заказ</button>
+    </div>
+  </div>
+  <div class="cart-modal-overlay"></div>
+
+  <!-- Header with Black Background -->
+  <div class="header-wrapper">
+    <div class="container">
+      <header class="header">
+        <a href="index.html" class="logo">Вкусный Уголок</a>
+        
+        <button class="nav-toggle" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <nav class="nav">
+          <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="products.html" class="nav-link">Products</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="about.html" class="nav-link active">Contact Us</a></li>
+            <li>
+              <button class="cart-icon">
+                🛒
+                <span class="cart-count">0</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  </div>
+
+  <!-- Contact Hero -->
+  <section class="contact-hero">
+    <div class="container">
+      <h1>Свяжитесь с нами</h1>
+      <p>Мы всегда рады помочь вам. Задавайте вопросы, делайте заказы или просто приходите в гости!</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Contact Info & Form -->
+    <div class="contact-container">
+      <!-- Contact Information -->
+      <div class="contact-info">
+        <h2>Наши контакты</h2>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-details">
+            <h3>Адрес</h3>
+            <p>ул. Брухерстоуна 97<br>Казань, Россия</p>
+            <p style="color: var(--primary-brown); font-size: 14px; margin-top: 5px;">
+              <i class="fas fa-subway"></i> Ближайшее метро: Кремлёвская
+            </p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-details">
+            <h3>Телефон</h3>
+            <p>+7 (909) 772-83-90</p>
+            <p style="color: var(--primary-brown); font-size: 14px; margin-top: 5px;">
+              <i class="fas fa-clock"></i> Звоните с 8:00 до 20:00
+            </p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-details">
+            <h3>Email</h3>
+            <p>info@fincrolet.ru</p>
+            <p style="color: var(--primary-brown); font-size: 14px; margin-top: 5px;">
+              <i class="fas fa-reply"></i> Отвечаем в течение 24 часов
+            </p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <div class="contact-details">
+            <h3>Поддержка</h3>
+            <p>+7 (800) 555-35-35</p>
+            <p style="color: var(--primary-brown); font-size: 14px; margin-top: 5px;">
+              <i class="fas fa-comments"></i> Круглосуточная горячая линия
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h2>Напишите нам</h2>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">Ваше имя *</label>
+            <input type="text" id="name" class="form-control" placeholder="Иван Иванов" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" class="form-control" placeholder="example@mail.ru" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" class="form-control" placeholder="+7 (900) 000-00-00">
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Тема</label>
+            <select id="subject" class="form-control">
+              <option value="">Выберите тему</option>
+              <option value="order">Заказ продукции</option>
+              <option value="question">Вопрос о продукции</option>
+              <option value="delivery">Доставка</option>
+              <option value="cooperation">Сотрудничество</option>
+              <option value="other">Другое</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Сообщение *</label>
+            <textarea id="message" class="form-control" placeholder="Напишите ваше сообщение здесь..." required></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> Отправить сообщение
+          </button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Map Section -->
+    <section class="map-section">
+      <h2 style="font-family: var(--font-family-sansita-swashed); color: var(--primary-brown); text-align: center; margin-bottom: var(--space-lg);">
+        Мы на карте
+      </h2>
+      <div class="map-container">
+        <div class="map-placeholder">
+          <i class="fas fa-map-marked-alt"></i>
+          <h3>ул. Брухерстоуна 97, Казань</h3>
+          <p>Откройте в Google Maps или Яндекс.Картах</p>
+          <div style="margin-top: var(--space-md);">
+            <a href="https://yandex.ru/maps" target="_blank" style="background: var(--primary-brown); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; display: inline-block; margin: 0 10px;">
+              <i class="fab fa-yandex"></i> Яндекс.Карты
+            </a>
+            <a href="https://maps.google.com" target="_blank" style="background: #4285F4; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; display: inline-block; margin: 0 10px;">
+              <i class="fab fa-google"></i> Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Business Hours -->
+    <section class="hours-section">
+      <h2>Часы работы</h2>
+      <div class="hours-grid">
+        <div class="hours-day">
+          <h3>Понедельник - Пятница</h3>
+          <p>8:00 - 20:00</p>
+          <p class="highlight">Без перерыва</p>
+        </div>
+        
+        <div class="hours-day">
+          <h3>Суббота</h3>
+          <p>9:00 - 18:00</p>
+          <p>Обед: 13:00 - 14:00</p>
+        </div>
+        
+        <div class="hours-day">
+          <h3>Воскресенье</h3>
+          <p>10:00 - 16:00</p>
+          <p class="highlight">Свежая выпечка весь день</p>
+        </div>
+        
+        <div class="hours-day">
+          <h3>Праздничные дни</h3>
+          <p>10:00 - 14:00</p>
+          <p>Уточняйте по телефону</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Social Media -->
+    <section class="social-section">
+      <h2>Мы в соцсетях</h2>
+      <div class="social-icons">
+        <a href="#" class="social-icon" style="background: #4C75A3;">
+          <i class="fab fa-vk"></i>
+        </a>
+        <a href="#" class="social-icon" style="background: #FF0000;">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="#" class="social-icon" style="background: #25D366;">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="#" class="social-icon" style="background: #0088cc;">
+          <i class="fab fa-telegram"></i>
+        </a>
+      </div>
+      <p style="margin-top: var(--space-lg); color: var(--text-rgb-93-93-93); font-style: italic;">
+        Подписывайтесь, чтобы быть в курсе новых поступлений и акций!
+      </p>
+    </section>
+    
+    <!-- Footer -->
+ <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h4>About Us</h4>
+          <ul class="contact-info">
+            <li>📞 +7 (909) 772-83-90</li>
+            <li>✉️ info@fincrolet.ru</li>
+            <li>📍 ул. Брухерстоуна 97, Казань, Россия</li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Recent News</h4>
+          <p class="text-rgb-245-245-245">Subscribe to our newsletter</p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Your email" required>
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Harris Bakery. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/script2.js"></script>
+</body>
+</html>

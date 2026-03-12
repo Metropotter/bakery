@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Harris Bakery - Все наши продукты">
+  <title>Harris Bakery - Продукты</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins|Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Cart Modal -->
+  <div class="cart-modal">
+    <div class="cart-header">
+      <h3>Ваша корзина</h3>
+      <button class="close-cart">&times;</button>
+    </div>
+    <div class="cart-items">
+      <!-- Cart items will be added here by JavaScript -->
+    </div>
+    <div class="cart-total">
+      <p>Итого: <span class="total-price">$0</span></p>
+      <button class="checkout-btn">Оформить заказ</button>
+    </div>
+  </div>
+  <div class="cart-modal-overlay"></div>
+
+  <!-- Header with Black Background -->
+  <div class="header-wrapper">
+    <div class="container">
+      <header class="header">
+        <a href="index.html" class="logo">Вкусный Уголок</a>
+        
+        <button class="nav-toggle" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <nav class="nav">
+          <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="products.html" class="nav-link active">Products</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="about.html" class="nav-link">Contact Us</a></li>
+            <li>
+              <button class="cart-icon">
+                🛒
+                <span class="cart-count">0</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  </div>
+
+  <!-- Products Page Hero -->
+  <section class="hero-section" style=" /*background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+              url('../images/rectangle-10-77.png') center/cover no-repeat; */ ">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Все Продукты</h1>
+        <p class="hero-subtitle">Свежая выпечка каждый день</p>
+        <div class="hero-actions">
+          <a href="#bread" class="btn-primary">Хлеб</a>
+          <a href="#pastry" class="btn-primary">Выпечка</a>
+          <a href="#desserts" class="btn-primary">Десерты</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Bread Products -->
+    <section class="top-products-section" id="bread">
+      <h2 class="section-title">Хлеб</h2>
+      <div class="products-grid">
+        <!-- Bread 1 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="images/rectangle-70-22.png" class="product-image" alt="Whole Grain Bread">
+            <span class="product-badge">Хит</span>
+          </div>
+          <div class="product-content">
+            <div class="product-info">
+              <h3 class="product-name">Цельнозерновой Хлеб</h3>
+              <div class="product-price">$40</div>
+            </div>
+            <p style="color: var(--text-rgb-93-93-93); margin-bottom: 15px; font-size: 14px;">
+              Полезный хлеб из цельного зерна
+            </p>
+            <div class="product-actions">
+              <button class="btn-add">В корзину</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bread 2 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="images/rectangle-71-33.png" class="product-image" alt="Rye Bread">
+            <span class="product-badge">Новинка</span>
+          </div>
+          <div class="product-content">
+            <div class="product-info">
+              <h3 class="product-name">Ржаной Хлеб</h3>
+              <div class="product-price">$35</div>
+            </div>
+            <p style="color: var(--text-rgb-93-93-93); margin-bottom: 15px; font-size: 14px;">
+              Традиционный русский хлеб
+            </p>
+            <div class="product-actions">
+              <button class="btn-add">В корзину</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bread 3 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="images/rectangle-72-44.png" class="product-image" alt="French Baguette">
+            <span class="product-badge">Популярный</span>
+          </div>
+          <div class="product-content">
+            <div class="product-info">
+              <h3 class="product-name">Французский Багет</h3>
+              <div class="product-price">$25</div>
+            </div>
+            <p style="color: var(--text-rgb-93-93-93); margin-bottom: 15px; font-size: 14px;">
+              Хрустящий французский хлеб
+            </p>
+            <div class="product-actions">
+              <button class="btn-add">В корзину</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bread 4 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="images/rectangle-73-55.png" class="product-image" alt="Multigrain Bread">
+            <span class="product-badge">Здоровье</span>
+          </div>
+          <div class="product-content">
+            <div class="product-info">
+              <h3 class="product-name">Мультизерновой Хлеб</h3>
+              <div class="product-price">$38</div>
+            </div>
+            <p style="color: var(--text-rgb-93-93-93); margin-bottom: 15px; font-size: 14px;">
+              7 видов зерен и семян
+            </p>
+            <div class="product-actions">
+              <button class="btn-add">В корзину</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bread 5 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="images/rectangle-74-66.png" class="product-image" alt="Sourdough Bread">
+            <span class="product-badge">Премиум</span>
+          </div>
+          <div class="product-content">
+            <div class="product-info">
+              <h3 class="product-name">Хлеб на Закваске</h3>
+              <div class="product-price">$42</div>
+            </div>
+            <p style="color: var(--text-rgb-93-93-93); margin-bottom: 15px; font-size: 14px;">
+              Натуральная закваска, 48 часов
+            </p>
+            <div class="product-actions">
+              <button class="btn-add">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pastry Products -->
+    <section class="top-products-section" id="pastry">
+      <h2 class="section-title">Выпечка</h2>
+      <div class="products-grid">
+        <!-- Pastry 1 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="images/rectangle-20-3.png" class="product-image" alt="Croissant">
+            <span class="product-badge">Утро</span>
+          </div>
+          <div class="product-content">
+            <div class="product-info">
+              <h3 class="product-name">Круассан с Маслом</h3>
+              <div class="product-price">$15</div>
+            </div>
+            <p style="color: var(--text-rgb-93-93-93); margin-bottom: 15px; font-size: 14px;">
+              Слоеный, с натуральным маслом
+            </p>
+            <div class="product-actions">
+              <button class="btn-add">В корзину</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pastry 2 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="images/rectangle-21-4.png" class="product-image" alt="Almond Croissant">
+            <span class="product-badge">Хит</span>
+          </div>
+          <div class="product-content">
+            <div class="product-info">
+              <h3 class="product-name">Миндальный Круассан</h3>
+              <div class="product-price">$18</div>
+            </div>
+            <p style="color: var(--text-rgb-93-93-93); margin-bottom: 15px; font-size: 14px;">
+              С миндальной начинкой
+            </p>
+            <div class="product-actions">
+              <button class="btn-add">В корзину</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pastry 3 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="images/rectangle-22-5.png" class="product-image" alt="Pain au Chocolat">
+            <span class="product-badge">Шоколад</span>
+          </div>
+          <div class="product-content">
+            <div class="product-info">
+              <h3 class="product-name">Шоколадная Выпечка</h3>
+              <div class="product-price">$16</div>
+            </div>
+            <p style="color: var(--text-rgb-93-93-93); margin-bottom: 15px; font-size: 14px;">
+              С настоящим бельгийским шоколадом
+            </p>
+            <div class="product-actions">
+              <button class="btn-add">В корзину</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pastry 4 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="images/rectangle-23-7.png" class="product-image" alt="Danish Pastry">
+            <span class="product-badge">Фрукты</span>
+          </div>
+          <div class="product-content">
+            <div class="product-info">
+              <h3 class="product-name">Датская Выпечка</h3>
+              <div class="product-price">$20</div>
+            </div>
+            <p style="color: var(--text-rgb-93-93-93); margin-bottom: 15px; font-size: 14px;">
+              С яблоком и корицей
+            </p>
+            <div class="product-actions">
+              <button class="btn-add">В корзину</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pastry 5 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="images/rectangle-24-8.png" class="product-image" alt="Cinnamon Roll">
+            <span class="product-badge">Сладкое</span>
+          </div>
+          <div class="product-content">
+            <div class="product-info">
+              <h3 class="product-name">Булочка с Корицей</h3>
+              <div class="product-price">$14</div>
+            </div>
+            <p style="color: var(--text-rgb-93-93-93); margin-bottom: 15px; font-size: 14px;">
+              Пышная, с глазурью
+            </p>
+            <div class="product-actions">
+              <button class="btn-add">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Desserts -->
+    <section class="top-products-section" id="desserts">
+      <h2 class="section-title">Десерты</h2>
+      <div class="products-grid">
+        <!-- Dessert 1 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="images/rectangle-25-6.png" class="product-image" alt="Chocolate Cake">
+            <span class="product-badge">Торт</span>
+          </div>
+          <div class="product-content">
+            <div class="product-info">
+              <h3 class="product-name">Шоколадный Торт</h3>
+              <div class="product-price">$25</div>
+            </div>
+            <p style="color: var(--text-rgb-93-93-93); margin-bottom: 15px; font-size: 14px;">
+              5 слоев, шоколадный ганаш
+            </p>
+            <div class="product-actions">
+              <button class="btn-add">В корзину</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dessert 2 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="images/rectangle-156-100.png" class="product-image" alt="Puff Pastry">
+            <span class="product-badge">Слоеное</span>
+          </div>
+          <div class="product-content">
+            <div class="product-info">
+              <h3 class="product-name">Слоеное Тесто</h3>
+              <div class="product-price">$8</div>
+            </div>
+            <p style="color: var(--text-rgb-93-93-93); margin-bottom: 15px; font-size: 14px;">
+              256 слоев, хрустящее
+            </p>
+            <div class="product-actions">
+              <button class="btn-add">В корзину</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dessert 3 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="images/rectangle-153-102.png" class="product-image" alt="Doughnuts">
+            <span class="product-badge">Понички</span>
+          </div>
+          <div class="product-content">
+            <div class="product-info">
+              <h3 class="product-name">Пончики</h3>
+              <div class="product-price">$8</div>
+            </div>
+            <p style="color: var(--text-rgb-93-93-93); margin-bottom: 15px; font-size: 14px;">
+              С сахарной пудрой, 6 шт
+            </p>
+            <div class="product-actions">
+              <button class="btn-add">В корзину</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dessert 4 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="images/rectangle-154-104.png" class="product-image" alt="Brownies">
+            <span class="product-badge">Шоколад</span>
+          </div>
+          <div class="product-content">
+            <div class="product-info">
+              <h3 class="product-name">Брауни</h3>
+              <div class="product-price">$8</div>
+            </div>
+            <p style="color: var(--text-rgb-93-93-93); margin-bottom: 15px; font-size: 14px;">
+              С грецкими орехами
+            </p>
+            <div class="product-actions">
+              <button class="btn-add">В корзину</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dessert 5 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="images/rectangle-70-22.png" class="product-image" alt="Fruit Tart">
+            <span class="product-badge">Фрукты</span>
+          </div>
+          <div class="product-content">
+            <div class="product-info">
+              <h3 class="product-name">Фруктовый Тарт</h3>
+              <div class="product-price">$22</div>
+            </div>
+            <p style="color: var(--text-rgb-93-93-93); margin-bottom: 15px; font-size: 14px;">
+              С сезонными фруктами
+            </p>
+            <div class="product-actions">
+              <button class="btn-add">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Muffins Section -->
+    <section class="top-products-section">
+      <h2 class="section-title">Маффины и Кексы</h2>
+      <div class="products-grid">
+        <!-- Muffin 1 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="images/rectangle-71-33.png" class="product-image" alt="Blueberry Muffin">
+            <span class="product-badge">Ягоды</span>
+          </div>
+          <div class="product-content">
+            <div class="product-info">
+              <h3 class="product-name">Черничный Маффин</h3>
+              <div class="product-price">$12</div>
+            </div>
+            <p style="color: var(--text-rgb-93-93-93); margin-bottom: 15px; font-size: 14px;">
+              Свежая черника, нежный крем
+            </p>
+            <div class="product-actions">
+              <button class="btn-add">В корзину</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Muffin 2 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="images/rectangle-72-44.png" class="product-image" alt="Chocolate Muffin">
+            <span class="product-badge">Шоколад</span>
+          </div>
+          <div class="product-content">
+            <div class="product-info">
+              <h3 class="product-name">Шоколадный Маффин</h3>
+              <div class="product-price">$12</div>
+            </div>
+            <p style="color: var(--text-rgb-93-93-93); margin-bottom: 15px; font-size: 14px;">
+              С шоколадными кусочками
+            </p>
+            <div class="product-actions">
+              <button class="btn-add">В корзину</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Muffin 3 -->
+        <div class="product-card">
+          <div class="product-image-wrapper">
+            <img src="images/rectangle-73-55.png" class="product-image" alt="Lemon Poppy Muffin">
+            <span class="product-badge">Цитрус</span>
+          </div>
+          <div class="product-content">
+            <div class="product-info">
+              <h3 class="product-name">Лимонный Маффин</h3>
+              <div class="product-price">$11</div>
+            </div>
+            <p style="color: var(--text-rgb-93-93-93); margin-bottom: 15px; font-size: 14px;">
+              С лимонной цедрой и глазурью
+            </p>
+            <div class="product-actions">
+              <button class="btn-add">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+   <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h4>About Us</h4>
+          <ul class="contact-info">
+            <li>📞 +7 (909) 772-83-90</li>
+            <li>✉️ info@fincrolet.ru</li>
+            <li>📍 ул. Брухерстоуна 97, Казань, Россия</li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Recent News</h4>
+          <p class="text-rgb-245-245-245">Subscribe to our newsletter</p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Your email" required>
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Harris Bakery. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Harris Bakery - Наша галерея">
+  <title>Harris Bakery - Галерея</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins|Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+  <!-- Cart Modal -->
+  <div class="cart-modal">
+    <div class="cart-header">
+      <h3>Ваша корзина</h3>
+      <button class="close-cart">&times;</button>
+    </div>
+    <div class="cart-items">
+      <!-- Cart items will be added here by JavaScript -->
+    </div>
+    <div class="cart-total">
+      <p>Итого: <span class="total-price">$0</span></p>
+      <button class="checkout-btn">Оформить заказ</button>
+    </div>
+  </div>
+  <div class="cart-modal-overlay"></div>
+
+  <!-- Slideshow Modal -->
+  <div class="slideshow-modal">
+    <button class="close-slideshow">&times;</button>
+    <div class="slideshow-container">
+      <div class="slide-counter">1 / 12</div>
+      <button class="slideshow-nav prev-slide">‹</button>
+      <button class="slideshow-nav next-slide">›</button>
+      <img class="slideshow-image" src="" alt="">
+      <div class="slideshow-caption"></div>
+    </div>
+  </div>
+
+  <!-- Header with Black Background -->
+  <div class="header-wrapper">
+    <div class="container">
+      <header class="header">
+        <a href="index.html" class="logo">Вкусный Уголок</a>
+        
+        <button class="nav-toggle" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <nav class="nav">
+          <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="products.html" class="nav-link">Products</a></li>
+            <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+            <li><a href="about.html" class="nav-link">Contact Us</a></li>
+            <li>
+              <button class="cart-icon">
+                🛒
+                <span class="cart-count">0</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  </div>
+
+  <!-- Gallery Hero -->
+  <section class="hero-section" style=" /*background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+              url('../images/rectangle-10-77.png') center/cover no-repeat; */">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Наша Галерея</h1>
+        <p class="hero-subtitle">Кликните на фото для просмотра в слайд-шоу</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <!-- Gallery Categories -->
+    <section class="gallery-section">
+      <div class="gallery-categories">
+        <button class="category-btn active" data-category="all">Все фото</button>
+        <button class="category-btn" data-category="bread">Хлеб</button>
+        <button class="category-btn" data-category="pastry">Выпечка</button>
+        <button class="category-btn" data-category="desserts">Десерты</button>
+        <button class="category-btn" data-category="bakery">Пекарня</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-grid">
+        <!-- Image 1 -->
+        <div class="gallery-item" data-category="bread" data-index="0">
+          <img src="images/rectangle-70-22.png" alt="Fresh Bread">
+          <div class="gallery-caption">Свежий хлеб</div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="gallery-item" data-category="bread" data-index="1">
+          <img src="images/rectangle-71-33.png" alt="Artisan Bread">
+          <div class="gallery-caption">Арт-хлеб</div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="gallery-item" data-category="pastry" data-index="2">
+          <img src="images/rectangle-20-3.png" alt="Croissants">
+          <div class="gallery-caption">Круассаны</div>
+        </div>
+
+        <!-- Image 4 -->
+        <div class="gallery-item" data-category="pastry" data-index="3">
+          <img src="images/rectangle-21-4.png" alt="Muffins">
+          <div class="gallery-caption">Маффины</div>
+        </div>
+
+        <!-- Image 5 -->
+        <div class="gallery-item" data-category="desserts" data-index="4">
+          <img src="images/rectangle-22-5.png" alt="Cakes">
+          <div class="gallery-caption">Торты</div>
+        </div>
+
+        <!-- Image 6 -->
+        <div class="gallery-item" data-category="desserts" data-index="5">
+          <img src="images/rectangle-23-7.png" alt="Pastries">
+          <div class="gallery-caption">Пирожные</div>
+        </div>
+
+        <!-- Image 7 -->
+        <div class="gallery-item" data-category="desserts" data-index="6">
+          <img src="images/rectangle-24-8.png" alt="Donuts">
+          <div class="gallery-caption">Пончики</div>
+        </div>
+
+        <!-- Image 8 -->
+        <div class="gallery-item" data-category="desserts" data-index="7">
+          <img src="images/rectangle-25-6.png" alt="Brownies">
+          <div class="gallery-caption">Брауни</div>
+        </div>
+
+        <!-- Image 9 -->
+        <div class="gallery-item" data-category="bakery" data-index="8">
+          <img src="images/rectangle-156-100.png" alt="Bakery Interior">
+          <div class="gallery-caption">Интерьер пекарни</div>
+        </div>
+
+        <!-- Image 10 -->
+        <div class="gallery-item" data-category="bakery" data-index="9">
+          <img src="images/rectangle-153-102.png" alt="Baking Process">
+          <div class="gallery-caption">Процесс выпечки</div>
+        </div>
+
+        <!-- Image 11 -->
+        <div class="gallery-item" data-category="bakery" data-index="10">
+          <img src="images/rectangle-154-104.png" alt="Fresh Ingredients">
+          <div class="gallery-caption">Свежие ингредиенты</div>
+        </div>
+
+        <!-- Image 12 -->
+        <div class="gallery-item" data-category="bakery" data-index="11">
+          <img src="images/rectangle-70-22.png" alt="Team">
+          <div class="gallery-caption">Наша команда</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h4>About Us</h4>
+            <ul class="contact-info">
+              <li>📞 +7 (909) 772-83-90</li>
+              <li>✉️ info@fincrolet.ru</li>
+              <li>📍 ул. Брухерстоуна 97, Казань, Россия</li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Explore</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li><a href="gallery.html" class="active">Gallery</a></li>
+              <li><a href="about.html">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Recent News</h4>
+            <p class="text-rgb-245-245-245">Subscribe to our newsletter for updates</p>
+            <form class="newsletter-form">
+              <input type="email" class="newsletter-input" placeholder="Your email" required>
+              <button type="submit" class="newsletter-btn">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Harris Bakery. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/script1.js"></script>
+</body>
+</html>
